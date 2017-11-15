@@ -1,0 +1,14 @@
+<fieldset>
+	<legend>Add a Quote</legend>
+	<form (submit)="onSubmit()" #quoteForm="ngForm">
+		<textarea required minlength='4' name="text" [(ngModel)]='quote.text' #text='ngModel'></textarea>
+		<span class="invalid" *ngIf="text.dirty && text.invalid">Quote must be at least 4 chars.</span>
+		<label>Author:
+			<input type="text" required minlength='4' name="author" [(ngModel)]='quote.author' #author='ngModel'>
+		</label>
+		<span class="invalid" *ngIf="author.dirty && author.invalid">Author must be at least 4 chars.</span>
+		<input type="submit" name="submit" value="Add Quote" [disabled]="quoteForm.invalid">
+	</form>
+</fieldset>
+
+{{quote | json}}

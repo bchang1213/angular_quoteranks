@@ -1,0 +1,14 @@
+.up{
+	background-color:green;
+	width: 60px;
+}
+
+.down{
+	background-color:red;
+	width: 60px;
+}
+
+.delete{
+	background-color:grey;
+	width: 60px;
+}

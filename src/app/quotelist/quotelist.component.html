@@ -1,0 +1,9 @@
+<h1>Quotes List</h1>
+<fieldset *ngFor="let quote of quotes">
+	<p>{{quote.text}}</p>
+	<p>-{{quote.author}}</p>
+	<span>+{{quote.rating}}</span>
+	<button (click)="upVote(quote)" class="up">Vote Up</button>
+	<button (click)="downVote(quote)" class="down">Vote Down</button>
+	<button (click)="delete(quote)" class="delete">Delete</button>
+</fieldset>
